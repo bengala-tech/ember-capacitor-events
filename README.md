@@ -1,4 +1,4 @@
-# @bengala-tech/capacitor-events
+# ember-capacitor-events
 
 This is a wrapper around capacitor events, heavely based on [ember-cordova-events](http://corber.io/pages/addons/events.html).
 
@@ -11,7 +11,7 @@ This is a wrapper around capacitor events, heavely based on [ember-cordova-event
 ## Installation
 
 ```
-ember install @bengala-tech/capacitor-events
+ember install ember-capacitor-events
 ```
 
 ## Usage
