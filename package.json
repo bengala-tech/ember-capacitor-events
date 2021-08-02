@@ -6,7 +6,7 @@
     "ember-addon",
     "capacitor"
   ],
-  "repository": "https://github.com/bengala-tech/ember-capacitor-events",
+  "repository": "bengala-tech/ember-capacitor-events",
   "license": "MIT",
   "author": "betocantu93@gmail.com",
   "directories": {
