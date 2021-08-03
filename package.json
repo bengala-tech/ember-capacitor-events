@@ -1,12 +1,12 @@
 {
   "name": "ember-capacitor-events",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Adds a service and a computed for easier capacitor eventing",
   "keywords": [
     "ember-addon",
     "capacitor"
   ],
-  "repository": "bengala-tech/ember-capacitor-events",
+  "repository": "https://github.com/bengala-tech/ember-capacitor-events",
   "license": "MIT",
   "author": "betocantu93@gmail.com",
   "directories": {
@@ -25,12 +25,13 @@
     "test": "npm-run-all lint test:*",
     "test:ember": "ember test",
     "test:ember-compatibility": "ember try:each",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+    "release": "standard-version"
   },
   "dependencies": {
     "@ember-decorators/utils": "^6.0.0",
     "ember-cli-babel": "^7.26.3",
-    "ember-cli-htmlbars": "^5.7.1"
+    "ember-cli-htmlbars": "^5.7.1",
+    "standard-version": "^9.3.1"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
