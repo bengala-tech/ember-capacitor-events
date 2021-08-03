@@ -1,1 +1,9 @@
-GlimmerComponent
+{{on-capacitor 'batteryLow' this.batteryLow @name bubbles=@bubbles}}
+<button {{on 'click' (fn this.setSomething (not this.something))}}>
+  {{@name}}
+  {{if this.something 'something' 'not something'}}
+</button>
+{{#if this.something}}
+  <TryGlimmer @name={{concat @name '-' 'something'}} />
+{{/if}}
+{{yield}}
