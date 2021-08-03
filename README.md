@@ -88,6 +88,16 @@ export default class TryGlimmerComponent extends Component {
 }
 ```
 
+## `{{on-capacitor}}` helper
+
+Use `{{on-capacitor}}` when you want easy lifecycle on/off using templates, you can optionally pass `bubbles=false` and previous helper invocations listening for the same event won't be called. You must ignore bubble manually for other usages as `@subscribe` or direct usage with `this.capacitorEvents.on`
+
+```
+  {{on-capacitor "backButton" this.back}} //Won't be called since previous bubbles false
+  {{on-capacitor "backButton" this.back bubbles=false}} Second
+  {{on-capacitor "backButton" this.back}} //Will be called first
+```
+
 ## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
