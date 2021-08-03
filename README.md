@@ -33,7 +33,7 @@ export default class ApplicationRoute extends Route {
       .loadPlugins([
         {
           plugin: App,
-          events: ['backButton'],
+          events: ['backButton'], //The events you want to lisent from this particular Plugin
         },
         {
           plugin: Network,
