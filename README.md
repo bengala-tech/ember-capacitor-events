@@ -33,7 +33,7 @@ export default class ApplicationRoute extends Route {
       .loadPlugins([
         {
           plugin: App,
-          events: ['backButton'],
+          events: ['backButton'], //The events you want to lisent from this particular Plugin
         },
         {
           plugin: Network,
@@ -92,10 +92,10 @@ export default class TryGlimmerComponent extends Component {
 
 Use `{{on-capacitor}}` when you want easy lifecycle on/off using templates, you can optionally pass `bubbles=false` and previous helper invocations listening for the same event won't be called. You must ignore bubble manually for other usages as `@subscribe` or direct usage with `this.capacitorEvents.on`
 
-```
-  {{on-capacitor "backButton" this.back}} //Won't be called since previous bubbles false
-  {{on-capacitor "backButton" this.back bubbles=false}} Second
-  {{on-capacitor "backButton" this.back}} //Will be called first
+```hbs
+ {{on-capacitor "backButton" this.back}} //Won't be called since previous bubbles false
+ {{on-capacitor "backButton" this.back bubbles=false}} Second
+ {{on-capacitor "backButton" this.back}} //Will be called first
 ```
 
 ## Contributing
