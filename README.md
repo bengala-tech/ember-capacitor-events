@@ -23,7 +23,7 @@ we need to configure the capacitorEvents service to listen for them, you must in
 import Route from '@ember/route';
 import { inject as service } from '@ember/service';
 import { App } from '@capacitor/app';
-import { Network } from '@capacitor/app';
+import { Network } from '@capacitor/network';
 
 export default class ApplicationRoute extends Route {
   @service capacitorEvents;
