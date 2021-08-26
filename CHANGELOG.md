@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/bengala-tech/ember-capacitor-events/compare/v0.0.2...v0.0.3) (2021-08-26)
+
+
+### Bug Fixes
+
+* docs ([f13ec7d](https://github.com/bengala-tech/ember-capacitor-events/commit/f13ec7d9d2939f7fa0e79fd13754101f3a763c5b))
+
 ### [0.0.2](https://github.com/bengala-tech/ember-capacitor-events/compare/v0.0.1...v0.0.2) (2021-08-03)
 
 
