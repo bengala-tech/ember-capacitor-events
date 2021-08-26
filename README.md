@@ -51,6 +51,7 @@ and tear them when the object is destroyed via destroyables api.
 ```ts
 import Controller from '@ember/controller';
 import { inject as service } from '@ember/service';
+import subscribe from 'ember-capacitor-events';
 
 export default class ApplicationController extends Controller {
   @service capacitorEvents;
