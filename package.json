@@ -1,6 +1,6 @@
 {
   "name": "ember-capacitor-events",
-  "version": "0.0.3",
+  "version": "0.0.2",
   "description": "Adds a service and a computed for easier capacitor eventing",
   "keywords": [
     "ember-addon",
