@@ -3,11 +3,11 @@ import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
 
 export function callbackWrapper(event, callback, bubbles) {
-  if (event.bubbles !== false) {
+  if (event.cancelBubble !== true) {
     let shouldBubble = callback(event);
 
     if (shouldBubble === false || bubbles === false) {
-      event.bubbles = false;
+      event.cancelBubble = true;
     }
 
     return shouldBubble;
