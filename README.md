@@ -115,7 +115,7 @@ You must ignore and/or set `event.cancelBubble` manually for other usages as `@s
 
 ## Note on backButton event
 
-When you add a `backButton` listener Capacitor assumes you want to handle all of `backButton` events yourself (normal Capacitor behaivour is to do history.back() or close the app if there's no history), in order to keep this behaivour, you can add the following code to your application route
+When you add a `backButton` listener Capacitor assumes you want to handle all of `backButton` events yourself (normal Capacitor behavior is to do history.back() or close the app if there's no history), in order to keep this behavior, you can add the following code to your application route
 
 ```ts
 import { App } from '@capacitor/app';
