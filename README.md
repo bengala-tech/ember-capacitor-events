@@ -121,8 +121,22 @@ When you add a `backButton` listener Capacitor assumes you want to handle all of
 import { App } from '@capacitor/app';
 import subscribe from 'ember-capacitor-events';
 import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
 
 export default class ApplicationRoute extends Route {
+  @service capacitorEvents;
+  
+  beforeModel() {
+    this.capacitorEvents
+      .loadPlugins([
+        {
+          plugin: App,
+          events: ['backButton']
+        }
+      ])
+      .setupListeners();
+  }
+  
   @subscribe('capacitorEvents.backButton')
   onBackButton(event) {
     if (event.cancelBubble === true) {
