@@ -112,6 +112,31 @@ You must ignore and/or set `event.cancelBubble` manually for other usages as `@s
  {{on-capacitor "backButton" this.back bubbles=false}} Second
  {{on-capacitor "backButton" this.back}} //Will be called first
 ```
+# Note on Back button event
+
+When you add a `backButton` listener Capacitor assumes you want to handle all of `backButton` events yourself (normal Capacitor behaivour is to do history.back() or close the app if there's no history), in order to keep this behaivour, you can add the following code to your application route
+
+```ts
+import { App } from '@capacitor/app';
+import subscribe from 'ember-capacitor-events';
+import Route from '@ember/routing/route';
+
+export default class ApplicationRoute extends Route {
+  @subscribe('capacitorEvents.backButton')
+  onBackButton(event) {
+    if (event.cancelBubble === true) {
+      return;
+    }
+
+    if (event.canGoBack) { //Capacitor will add canGoBack if there's history
+      history.back();
+    } else {
+      App.exitApp();
+    }
+  }
+}
+
+```
 
 ## Contributing
 
