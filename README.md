@@ -113,7 +113,7 @@ You must ignore and/or set `event.cancelBubble` manually for other usages as `@s
  {{on-capacitor "backButton" this.back}} //Will be called first
 ```
 
-## Note on Back button event
+## Note on backButton event
 
 When you add a `backButton` listener Capacitor assumes you want to handle all of `backButton` events yourself (normal Capacitor behaivour is to do history.back() or close the app if there's no history), in order to keep this behaivour, you can add the following code to your application route
 
