@@ -153,6 +153,8 @@ export default class ApplicationRoute extends Route {
 
 ```
 
+This would return the normal Capacitor behaivor of closing the app if there's no more history
+
 ## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
